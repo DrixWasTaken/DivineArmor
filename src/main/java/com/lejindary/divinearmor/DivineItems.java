@@ -2,6 +2,7 @@ package com.lejindary.divinearmor;
 
 import com.google.common.base.Function;
 
+import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -21,6 +22,16 @@ public class DivineItems {
 		Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
 		return item;
+	}
+
+
+	public static Item BALL_SACK;
+
+
+
+	 
+	public static void initialize() {
+		BALL_SACK = register("ball_sack", Item::new, new Item.Properties());
 	}
 
 }
